@@ -1,0 +1,31 @@
+{
+  "name": "titanui",
+  "version": "1.0.0",
+  "description": "Electron UI for Titan",
+  "main": "titan-ui/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "dev": "npm run build && concurrently \"npm run build:watch\" \"npm run start:watch\"",
+    "start:watch": "nodemon --exec electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdSpurrier/TitanUI.git"
+  },
+  "author": "Ed Spurrier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdSpurrier/TitanUI/issues"
+  },
+  "homepage": "https://github.com/EdSpurrier/TitanUI#readme",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "electron": "^20.1.1",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
